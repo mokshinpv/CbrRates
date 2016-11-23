@@ -4,15 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0347A21A-15EE-4627-A8CD-BA42197F37AA}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{B52B9C4C-9A1E-4E7D-85FE-487B4F5797FD}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CbrRates.DataContract</RootNamespace>
-    <AssemblyName>CbrRates.DataContract</AssemblyName>
+    <RootNamespace>CbrRates.ConsoleTest</RootNamespace>
+    <AssemblyName>CbrRates.ConsoleTest</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -40,11 +43,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GetRateDynamicsRecord.cs" />
-    <Compile Include="GetRateDynamicsResponse.cs" />
-    <Compile Include="GetRateDynamicsRequest.cs" />
-    <Compile Include="ICbrService.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CbrRates.CbrIntegration\CbrRates.CbrIntegration.csproj">
+      <Project>{75FE9197-E278-409C-B601-D38A4821488B}</Project>
+      <Name>CbrRates.CbrIntegration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CbrRates.DataContract\CbrRates.DataContract.csproj">
+      <Project>{0347a21a-15ee-4627-a8cd-ba42197f37aa}</Project>
+      <Name>CbrRates.DataContract</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

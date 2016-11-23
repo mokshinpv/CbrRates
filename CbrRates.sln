@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CbrRates.DataContract", "Cb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CbrRates.BusinessLogic", "CbrRates.BusinessLogic\CbrRates.BusinessLogic.csproj", "{49F2D1BD-71C8-42F7-902A-DFF40C25286B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CbrRates.CbrIntegration", "CbrRates.CbrIntegration\CbrRates.CbrIntegration.csproj", "{75FE9197-E278-409C-B601-D38A4821488B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CbrRates.ConsoleTest", "CbrRates.ConsoleTest\CbrRates.ConsoleTest.csproj", "{B52B9C4C-9A1E-4E7D-85FE-487B4F5797FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{49F2D1BD-71C8-42F7-902A-DFF40C25286B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49F2D1BD-71C8-42F7-902A-DFF40C25286B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49F2D1BD-71C8-42F7-902A-DFF40C25286B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75FE9197-E278-409C-B601-D38A4821488B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75FE9197-E278-409C-B601-D38A4821488B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75FE9197-E278-409C-B601-D38A4821488B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75FE9197-E278-409C-B601-D38A4821488B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B52B9C4C-9A1E-4E7D-85FE-487B4F5797FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B52B9C4C-9A1E-4E7D-85FE-487B4F5797FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B52B9C4C-9A1E-4E7D-85FE-487B4F5797FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B52B9C4C-9A1E-4E7D-85FE-487B4F5797FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
