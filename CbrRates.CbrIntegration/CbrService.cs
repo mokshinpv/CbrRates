@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using System;
+using System.Globalization;
 using System.IO;
 using System.Net;
 using System.Xml.Serialization;
@@ -15,6 +16,11 @@ namespace CbrRates.CbrIntegration
         
         public GetRateDynamicsResponse GetRateDynamics(GetRateDynamicsRequest request)
         {
+            if (request.StartDate > request.EndDate)
+            {
+                throw new ArgumentException("Дата начала должна быть больше даты конца", nameof(request.StartDate));
+            }
+
             var url = ServiceBaseUrl + string.Format(GetRateDynamicsRelativeUrl, 
                 request.StartDate.ToString(Constants.RequestDateFormat, CultureInfo.InvariantCulture),
                 request.EndDate.ToString(Constants.RequestDateFormat, CultureInfo.InvariantCulture),
