@@ -63,3 +63,7 @@
 		transform: rotate(360deg);
 	}
 }
+
+.currency-page .chart-wrapper {
+    margin-top: 100px;
+}

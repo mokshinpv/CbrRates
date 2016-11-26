@@ -15,7 +15,9 @@ requirejs.config({
         'ko': "../libs/knockout/dist/knockout.debug",
         'jquery': "../libs/jquery/jquery",
         'bootstrap': "../libs/bootstrap/dist/js/bootstrap",
-        underscore: "../libs/underscore/underscore"
+        underscore: "../libs/underscore/underscore",
+        moment: "../libs/moment/moment",
+        chartjs: "../libs/chart.js/dist/Chart"
     },
     shim: {
         bootstrap: { deps: ["jquery"], exports: "jQuery" },
@@ -29,11 +31,9 @@ requirejs.config({
     }
 });
 
-define(["durandal/system", "durandal/app", "durandal/viewLocator", "bootstrap"], function (system, app, viewLocator) {
-    system.debug(true);
+define(["durandal/system", "durandal/app", "durandal/viewLocator", "bootstrap", "customBindings"], function (system, app, viewLocator) {
+    app.title = "Курсы ЦБ";
     
-    app.title = "Durandal Starter Kit";
-
     app.configurePlugins({
         router: true
     });

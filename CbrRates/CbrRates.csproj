@@ -150,6 +150,7 @@
     <Content Include="app\currency-page\currencyPageService.js" />
     <Content Include="app\currency-page\currencyPageViewModel.html" />
     <Content Include="app\currency-page\currencyPageViewModel.js" />
+    <Content Include="app\customBindings.js" />
     <Content Include="app\shell.html" />
     <Content Include="app\shell.js" />
     <Content Include="css\layout.css" />
