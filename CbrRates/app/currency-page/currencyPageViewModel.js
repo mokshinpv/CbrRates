@@ -5,7 +5,7 @@
         this.supportedCurrencies = ko.observableArray([]);
         this.selectedCurrency = ko.observable(null);
         this.ratesChartData = ko.observable({});
-
+        
         this.currencyService = new CurrencyPageServiceDef();
     }
 

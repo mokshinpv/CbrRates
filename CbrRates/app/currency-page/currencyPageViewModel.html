@@ -16,6 +16,10 @@
         </div>
     </div>
     <div class="chart-wrapper">
+        <h2 class="chart-title" data-bind="'with': selectedCurrency">
+            Динамика курса <span data-bind="text: code"></span> ЦБ РФ, руб.
+            <span style="display: none;" data-bind="visible: nominal > 1"> за <span data-bind="text: nominal"></span> <span data-bind="text: code"></span></span>
+        </h2>
         <canvas data-bind="chartjs: ratesChartData"></canvas>
     </div>
 </div>

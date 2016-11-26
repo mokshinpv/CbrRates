@@ -10,17 +10,24 @@ namespace CbrRates.BusinessLogic
             new Currency
             {
                 Id =  "R01235",
-                CountryName = "США"
+                CountryName = "США",
+                Code = "USD",
+                //TODO
+                Nominal = 1
             },
             new Currency
             {
                 Id =  "R01820",
-                CountryName = "Япония"
+                CountryName = "Япония",
+                Code = "JPY",
+                Nominal = 100
             },
             new Currency
             {
                 Id =  "R01375",
-                CountryName = "Китай"
+                CountryName = "Китай",
+                Code = "CNY",
+                Nominal = 10
             }
         };
 

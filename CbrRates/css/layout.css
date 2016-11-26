@@ -64,6 +64,6 @@
 	}
 }
 
-.currency-page .chart-wrapper {
-    margin-top: 100px;
+.currency-page .chart-title {
+    font-size: 20px;
 }
