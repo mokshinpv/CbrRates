@@ -32,6 +32,8 @@ requirejs.config({
 });
 
 define(["durandal/system", "durandal/app", "durandal/viewLocator", "bootstrap", "customBindings"], function (system, app, viewLocator) {
+    system.debug(true);
+
     app.title = "Курсы ЦБ";
     
     app.configurePlugins({
