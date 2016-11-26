@@ -7,12 +7,10 @@
         this.currencyRates = ko.observable(null);
 
         this.currencyService = new CurrencyPageServiceDef();
-
-        this.init();
     }
 
     _.extend(CurrencyPageViewModel.prototype, {
-        init: function() {
+        activate: function() {
             this.currencyService.getSupportedCurrencies().done(_.bind(function(currencies) {
                 this.supportedCurrencies(currencies);
 

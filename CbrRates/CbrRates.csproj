@@ -150,13 +150,14 @@
     <Content Include="app\currency-page\currencyPageService.js" />
     <Content Include="app\currency-page\currencyPageViewModel.html" />
     <Content Include="app\currency-page\currencyPageViewModel.js" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="app\shell.html" />
+    <Content Include="app\shell.js" />
+    <Content Include="css\layout.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
     <Content Include="gruntfile.js" />
+    <Content Include="img\spinner-tail.svg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include=".bowerrc" />
@@ -189,7 +190,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="css\" />
+    <Folder Include="Content\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

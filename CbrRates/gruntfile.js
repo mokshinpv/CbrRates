@@ -1,7 +1,9 @@
 ﻿var excludeModules = [];
 var includeModules = [
     '../libs/requirejs/require',
-    'app'
+    'app',
+    'shell',
+    'currency-page/currencyPageViewModel'
 ];
 
 module.exports = function (grunt) {
@@ -68,7 +70,8 @@ module.exports = function (grunt) {
             'styles': {
                 files: {
                     'build/cbr.css': [
-                        'libs/bootstrap/dist/css/bootstrap.css'
+                        'libs/bootstrap/dist/css/bootstrap.css',
+                        'css/layout.css'
                     ]
                 }
             }
