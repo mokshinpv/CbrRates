@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Web.Http;
 using CbrRates.BusinessLogic;
 using CbrRates.DataContract;
@@ -12,10 +13,15 @@ namespace CbrRates.Controllers
             return new GetSupportedCurrenciesHandler().Handle();
         }
 
-        public object GetRatesDynamics(string currencyId)
+        public GetRateDynamicsResponse GetRatesDynamics(string currencyId)
         {
-            //TODO
-            return new object();
+            //TODO hardcode
+            return new GetRatesDynamicsHandler().Handle(new GetRateDynamicsRequest
+            {
+                StartDate = new DateTime(2016, 8, 11),
+                EndDate = DateTime.Today,
+                CurrencyId = currencyId
+            });
         }
     }
 }

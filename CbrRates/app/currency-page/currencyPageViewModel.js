@@ -13,13 +13,13 @@
 
     _.extend(CurrencyPageViewModel.prototype, {
         init: function() {
-            this.currencyService.getSupportedCurrencies().done(function(currencies) {
+            this.currencyService.getSupportedCurrencies().done(_.bind(function(currencies) {
                 this.supportedCurrencies(currencies);
 
                 if (currencies.length > 0) {
                     this.selectCurrency(this.supportedCurrencies()[0]);
                 }
-            });
+            }, this));
         },
         selectCurrency: function (currency) {
             if (currency === this.selectedCurrency()) {
@@ -27,10 +27,10 @@
             }
 
             this.selectedCurrency(currency);
-            this.currencyService.getRatesDynamics(currency.id).done(function (response) {
+            this.currencyService.getRatesDynamics(currency.id).done(_.bind(function (response) {
                 this.currencyRates(response);
                 //TODO график
-            });
+            }, this));
         }
     });
 

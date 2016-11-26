@@ -40,10 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GetRatesDynamicsHandler.cs" />
     <Compile Include="GetSupportedCurrenciesHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CbrRates.CbrIntegration\CbrRates.CbrIntegration.csproj">
+      <Project>{75FE9197-E278-409C-B601-D38A4821488B}</Project>
+      <Name>CbrRates.CbrIntegration</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CbrRates.DataContract\CbrRates.DataContract.csproj">
       <Project>{0347A21A-15EE-4627-A8CD-BA42197F37AA}</Project>
       <Name>CbrRates.DataContract</Name>

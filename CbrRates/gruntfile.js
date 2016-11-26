@@ -1,8 +1,7 @@
 ﻿var excludeModules = [];
 var includeModules = [
     '../libs/requirejs/require',
-    'app',
-    'shell'
+    'app'
 ];
 
 module.exports = function (grunt) {

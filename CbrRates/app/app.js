@@ -9,13 +9,13 @@ requirejs.config({
     },
     paths: {
         'text': '../libs/requirejs-text/text',
-        'ko': '../libs/knockout.js/knockout.debug',
+        'ko': '../libs/knockout/dist/knockout.debug',
         'jquery': '../libs/jquery/dist/jquery',
         'bootstrap': '../libs/bootstrap/dist/js/bootstrap',
         underscore: '../libs/underscore/underscore'
     },
     shim: {
-        'shell': { deps: ['text!shell.html'] }
+        'currency-page/currencyPageViewModel': { deps: ['text!currency-page/currencyPageViewModel.html'] }
     },
     config: {
         i18n: {
