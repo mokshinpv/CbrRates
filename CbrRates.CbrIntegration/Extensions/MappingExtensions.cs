@@ -16,7 +16,7 @@ namespace CbrRates.CbrIntegration.Extensions
                 Records = response.Records.Select(r => new GetRateDynamicsRecord
                 {
                     Date = DateTime.ParseExact(r.Date, Constants.ResponseDateFormat, CultureInfo.InvariantCulture),
-                    Value = decimal.Parse(r.Value),
+                    Value = decimal.Parse(r.Value, Constants.RuCulture),
                     Nominal = r.Nominal
                 }).ToList()
             };
