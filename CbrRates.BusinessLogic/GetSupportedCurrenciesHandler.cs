@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
 using CbrRates.DataContract;
+using CbrRates.Framework.BusinessLogic;
 
 namespace CbrRates.BusinessLogic
 {
-    public class GetSupportedCurrenciesHandler
+    public class GetSupportedCurrenciesHandler : BusinessHandlerBase
     {
         private static readonly List<Currency> Currencies = new List<Currency>
         {

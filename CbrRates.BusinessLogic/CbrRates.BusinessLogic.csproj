@@ -53,6 +53,10 @@
       <Project>{0347A21A-15EE-4627-A8CD-BA42197F37AA}</Project>
       <Name>CbrRates.DataContract</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CbrRates.Framework\CbrRates.Framework.csproj">
+      <Project>{36044FF3-FB5A-4832-B58B-816BB9E210A7}</Project>
+      <Name>CbrRates.Framework</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,14 +1,22 @@
-﻿using CbrRates.CbrIntegration;
+﻿using System;
 using CbrRates.DataContract;
+using CbrRates.Framework.BusinessLogic;
 
 namespace CbrRates.BusinessLogic
 {
-    public class GetRatesDynamicsHandler
+    public class GetRatesDynamicsHandler : BusinessHandlerBase
     {
+        private readonly ICbrService _cbrService;
+
+        public GetRatesDynamicsHandler(ICbrService cbrService)
+        {
+            if (cbrService == null) throw new ArgumentNullException(nameof(cbrService));
+            _cbrService = cbrService;
+        }
+
         public GetRateDynamicsResponse Handle(GetRateDynamicsRequest request)
         {
-            //TODO
-            return new CbrService().GetRateDynamics(request);
+            return _cbrService.GetRateDynamics(request);
         }
     }
 }

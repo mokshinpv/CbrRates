@@ -60,6 +60,18 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.2.0.0\lib\net45-full\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Web.Common, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Web.Common.3.2.0.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Web.WebApi, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Web.WebApi.3.2.4.0\lib\net45-full\Ninject.Web.WebApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -215,6 +227,10 @@
     <ProjectReference Include="..\CbrRates.DataContract\CbrRates.DataContract.csproj">
       <Project>{0347A21A-15EE-4627-A8CD-BA42197F37AA}</Project>
       <Name>CbrRates.DataContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CbrRates.Framework\CbrRates.Framework.csproj">
+      <Project>{36044FF3-FB5A-4832-B58B-816BB9E210A7}</Project>
+      <Name>CbrRates.Framework</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
