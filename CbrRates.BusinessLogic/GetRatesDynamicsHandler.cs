@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Linq;
+using CbrRates.DataAccess.Repository;
 using CbrRates.DataContract;
 using CbrRates.Framework.BusinessLogic;
 
@@ -6,17 +7,24 @@ namespace CbrRates.BusinessLogic
 {
     public class GetRatesDynamicsHandler : BusinessHandlerBase
     {
-        private readonly ICbrService _cbrService;
-
-        public GetRatesDynamicsHandler(ICbrService cbrService)
-        {
-            if (cbrService == null) throw new ArgumentNullException(nameof(cbrService));
-            _cbrService = cbrService;
-        }
-
         public GetRateDynamicsResponse Handle(GetRateDynamicsRequest request)
         {
-            return _cbrService.GetRateDynamics(request);
+            var rateRecordsRepository = GetRepository<IRateRecordRepository>();
+
+            return new GetRateDynamicsResponse
+            {
+                CurrencyId = request.CurrencyId,
+                Records = rateRecordsRepository.Query()
+                    .Where(r => r.CurrencyId == request.CurrencyId && r.Date >= request.StartDate && r.Date <= request.EndDate)
+                    .OrderBy(r => r.Date)
+                    .Select(r => new GetRateDynamicsRecord
+                    {
+                        Nominal = r.Nominal,
+                        Date = r.Date,
+                        Value = r.Value
+                    })
+                    .ToList()
+            };
         }
     }
 }

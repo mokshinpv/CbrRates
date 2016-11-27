@@ -42,12 +42,17 @@
   <ItemGroup>
     <Compile Include="GetRatesDynamicsHandler.cs" />
     <Compile Include="GetSupportedCurrenciesHandler.cs" />
+    <Compile Include="LoadRatesDynamicsHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CbrRates.CbrIntegration\CbrRates.CbrIntegration.csproj">
       <Project>{75FE9197-E278-409C-B601-D38A4821488B}</Project>
       <Name>CbrRates.CbrIntegration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CbrRates.DataAccess\CbrRates.DataAccess.csproj">
+      <Project>{DCB5F243-68F8-46E9-936A-7DADAE7460E1}</Project>
+      <Name>CbrRates.DataAccess</Name>
     </ProjectReference>
     <ProjectReference Include="..\CbrRates.DataContract\CbrRates.DataContract.csproj">
       <Project>{0347A21A-15EE-4627-A8CD-BA42197F37AA}</Project>

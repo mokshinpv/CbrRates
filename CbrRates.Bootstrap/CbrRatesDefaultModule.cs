@@ -1,5 +1,6 @@
 ﻿using CbrRates.CbrIntegration;
 using CbrRates.DataAccess;
+using CbrRates.DataAccess.Repository;
 using CbrRates.DataContract;
 using CbrRates.Framework.BusinessLogic;
 using CbrRates.Framework.Common;
@@ -17,9 +18,13 @@ namespace CbrRates.Bootstrap
 
             Kernel.Bind<UnitOfWorkFactory>()
                 .ToMethod(context => new CbrRatesUnitOfWorkFactory(context.Kernel.Get<IDependencyResolver>(), "CbrRatesDbConnection")).InSingletonScope();
+
+            ((CbrRatesUnitOfWorkFactory)Kernel.Get<UnitOfWorkFactory>()).InitDataBase();
             
             Kernel.Bind<IBusinessHandlerFactory>().To<BusinessHandlerFactory>();
             Kernel.Bind<ICbrService>().To<CbrService>();
+
+            Kernel.Bind<IRateRecordRepository>().To<RateRecordRepository>();
         }
     }
 }

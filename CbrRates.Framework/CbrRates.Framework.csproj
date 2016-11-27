@@ -58,7 +58,9 @@
     <Compile Include="BusinessLogic\IBusinessHandlerWrapper.cs" />
     <Compile Include="Common\ConstructorArgument.cs" />
     <Compile Include="Common\IDependencyResolver.cs" />
+    <Compile Include="DataAccess\EntityFrameworkRepositoryBase.cs" />
     <Compile Include="DataAccess\EntityFrameworkUnitOfWork.cs" />
+    <Compile Include="DataAccess\IEntityKey.cs" />
     <Compile Include="DataAccess\IRepository.cs" />
     <Compile Include="DataAccess\IUnitOfWork.cs" />
     <Compile Include="DataAccess\NullObjectUnitOfWork.cs" />

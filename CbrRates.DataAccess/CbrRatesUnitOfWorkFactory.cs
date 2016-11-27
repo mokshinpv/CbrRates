@@ -27,6 +27,16 @@ namespace CbrRates.DataAccess
             return new EntityFrameworkUnitOfWork(_resolver, GetDbContext(), level);
         }
 
+        public void InitDataBase()
+        {
+            Database.SetInitializer(new CbrRatesDbInitializer());
+
+            using (var db = GetDbContext())
+            {
+                db.Database.Initialize(false);
+            }
+        }
+
         private DbContext GetDbContext()
         {
             return new CbrRatesDbContext(Configuration);

@@ -1,6 +1,9 @@
-﻿namespace CbrRates.DataAccess.Models
+﻿using System;
+using CbrRates.Framework.DataAccess;
+
+namespace CbrRates.DataAccess.Models
 {
-    public class RateRecord
+    public class RateRecord : IEntityKey<long>
     {
         public long Id { get; set; }
 
@@ -9,5 +12,7 @@
         public decimal Value { get; set; }
 
         public int Nominal { get; set; }
+
+        public DateTime Date { get; set; }
     }
 }

@@ -55,6 +55,8 @@
     <Compile Include="CbrRatesUnitOfWorkFactory.cs" />
     <Compile Include="Models\RateRecord.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\IRateRecordRepository.cs" />
+    <Compile Include="Repository\RateRecordRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

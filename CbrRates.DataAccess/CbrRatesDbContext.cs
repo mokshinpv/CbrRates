@@ -8,7 +8,6 @@ namespace CbrRates.DataAccess
         public CbrRatesDbContext(string configuration)
 			: base(configuration)
         {
-            Database.SetInitializer(new CbrRatesDbInitializer());
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
